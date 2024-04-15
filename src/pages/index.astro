@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BannerA from '../components/BannerA.astro';
+import Card from '../components/Card.astro';
+import BannerB from '../components/BannerB.astro';
+import HowItWorks from '../components/howItWorks.astro';
+import Pracing from '../components/Pracing.astro';
+import Form from '../components/Form.astro';
+---
+
+<Layout title="agencia-marketing-web" class="w-full">
+  <Header
+    name="agencia-marketing-web"
+    pag1="Inicio"
+    pag2="Nosotros"
+    pag3="Servicios"
+    pag4="Contacto"
+  />
+  <BannerA
+    title="Agencia Marketing Web"
+    body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptatum minus, veritatis corrupti culpa in deleniti fuga placeat quam tempora doloremque quo minima quasi voluptates numquam, sed, ad veniam? Possimus."
+    cta="Comenzar"
+    cta2="Leer Más"
+  />
+  <div class="flex flex-wrap w-full gap-6 m-5">
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+    <Card servicie="Servicio Nombre" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio dolores itaque consequuntur recusandae reiciendis tempora cumque assumenda" />
+  </div>
+  <BannerB
+    title="Anuncio"
+    text="Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi."
+    cta="Comenzar"
+    cta2="Más Información"
+  />
+  <HowItWorks />
+  <Pracing />
+  <Form />
+  <Footer name="agencia-marketing-web" year="2024" mail="correo@corrreo.com" />
+</Layout>
