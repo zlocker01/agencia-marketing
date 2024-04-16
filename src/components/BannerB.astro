@@ -2,38 +2,46 @@
 interface Props {
   title: string;
   text: string;
+  text2: string;
+  text3: string;
   cta: string;
-  cta2: string;
 }
 
-const { title, text, cta, cta2 } = Astro.props;
+const { title, text, text2, text3, cta } = Astro.props;
 ---
 
-<!-- Hero Container -->
-  <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
-    <!-- Component -->
-    <div class="grid grid-cols-1 items-center justify-items-start gap-8 sm:gap-20 lg:grid-cols-2">
-      <!-- Hero Content -->
-      <div class="flex flex-col">
-        <!-- Hero Title -->
-        <h2 class="mb-4 text-4xl font-bold md:text-6xl">{title}</h2>
-        <p class="mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12">{text}</p>
-        <!-- Hero Button -->
-        <div class="flex items-center">
-          <a href="#" class="mr-5 flex items-center bg-[#276ef1] px-8 py-4 font-semibold text-white transition [box-shadow:rgb(171,_196,245)-8px_8px] hover:[box-shadow:rgb(171,_196,_245)_0px_0px] md:mr-6 lg:mr-8">
-            <p class="mr-6 font-bold">{cta}</p>
-            <svg fill="currentColor" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-none">
-              <title>Arrow Right</title>
-              <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9"></polygon>
-            </svg>
-          </a>
-          <a href="#" class="flex font-bold">
-            <p class="text-black">{cta2}</p>
-            <img src="https://assets.website-files.com/6357722e2a5f19121d37f84d/6357752f71727ed3edf9213b_Vector (5).svg" alt="" class="ml-2 inline-block" />
-          </a>
-        </div>
-      </div>
-      <!-- Hero Image -->
-      <img src="https://assets.website-files.com/6357722e2a5f19121d37f84d/635b560b014d2b7cb8452be7_Frame 48031-3.jpg" alt="" class="inline-block h-full w-full max-w-[640px]" />
+<section class="bg-white dark:bg-gray-900 flex flex-row">
+  <div
+    class="container flex flex-col items-center px-4 py-12 mx-auto text-center"
+  >
+    <h2
+      class="max-w-2xl mx-auto text-2xl font-semibold tracking-tight text-gray-800 xl:text-3xl dark:text-white"
+    >
+      {title}
+    </h2>
+
+    <p class="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
+      {text}
+    </p>
+
+    <p class="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
+      {text2}
+    </p>
+
+    <p class="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
+      {text3}
+    </p>
+
+    <div class="inline-flex w-full mt-6 sm:w-auto">
+      <a
+        href="#"
+        class="inline-flex items-center justify-center w-full px-6 py-2 text-white duration-300 bg-blue-600 rounded-lg hover:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80 mx-2"
+      >
+        {cta}
+      </a>
     </div>
   </div>
+  <div class="bg-red-500 w-full h-full" >
+    <img src="" alt="imagen de banner">
+  </div>
+</section>
