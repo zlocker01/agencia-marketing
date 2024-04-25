@@ -2,78 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import BannerA from '../components/BannerA.astro';
-import Card from '../components/Card.astro';
-import BannerB from '../components/BannerB.astro';
-import HowItWorks from '../components/howItWorks.astro';
-import Pracing from '../components/Pracing.astro';
-import Form from '../components/Form.astro';
-import TeamCard from '../components/TeamCard.astro';
-import CardList from '../components/CardList.astro';
+import Bloque1 from '../components/Bloque1.astro';
 ---
 
 <Layout title="agencia-marketing-web">
   <Header
-    name="agencia-marketing-web"
-    pag1="Inicio"
+    name="marketing"
+    pag1="Contacto"
     pag2="Nosotros"
     pag3="Servicios"
-    pag4="Contacto"
   />
-  <BannerA
+  <!-- hero -->
+  <Bloque1
     title="¿Quieres dejar de generar likes y empezar a vender?"
     body="Nosotros te ayudamos "
     cta="Comenzar"
   />
-  <BannerB
-    title="Llegaste al lugar indicado."
-    text="¿Estás cansado de esas agencias que te hacen perder el tiempo revisando publicaciones?"
-    text2="¿Tu agencia solo te da pretextos de por qué no está generando más prospectos o ventas para tu negocio?"
-    text3="Da clic aquí y agenda un diagnóstico de marketing totalmente GRATIS"
-    cta="Agendar diagnóstico"
-  />
-  <div class="flex flex-row gap-5 w-full m-5 justify-center">
-    <TeamCard
-      name="Jesús Rojas"
-      text="Marketero especializado en creación de campañas en redes sociales y embudos de venta."
-    />
-    <TeamCard
-      name="Diego Beristain"
-      text="Desarrollador senior de sitios web, landing pages y chatbots para agilizar la operación de tu negocio."
-    />
-  </div>
-  <div>
-    <h2 class="text-center text-2xl font-bold">Somos tu agencia ideal si…</h2>
-    <CardList
-      text="Buscas una agencia enfocada en generar prospectos para tu negocio."
-    />
-    <CardList text="No te gusta perder tiempo revisando publicaciones." />
-    <CardList
-      text="Quieres tener la tranquilidad de que habrá un equipo pendiente de tus campañas para buscar los mejores resultados."
-    />
-    <CardList
-      text="Estás dispuesto a intentar cosas diferentes para lograr mejores resultados."
-    />
-    <CardList
-      text="Has trabajado con otras agencias y no te dieron los resultados que esperabas."
-    />
-  </div>
-  <HowItWorks />
-  <div class="flex flex-wrap w-full gap-6 m-5">
-    <Card
-      servicie="Marketing digital"
-      text="Hacemos campañas en redes sociales y buscadores, desarrollamos tu  sitio web y páginas de aterrizaje para generar prospectos o clientes y les damos seguimiento vía correo electrónico y Whatsapp para que solo tengas que concentrarte en cerrarlos."
-    />
-    <Card
-      servicie="Desarrollo web"
-      text="Creamos sitios web efectivos con estrategia de posicionamiento orgánico en buscadores y mensajes publicitarios que te ayuden a tener más clientes."
-    />
-    <Card
-      servicie="Automatizaciones"
-      text="Si ya tienes un sitio web y campañas en redes sociales que te dan buenos resultados, podemos automatizar el Whatsapp de tu negocio para que optimices la atención a tus clientes y no tengas que contratar miles de vendedores."
-    />
-  </div>
-  <Pracing />
-  <Form />
   <Footer name="agencia-marketing-web" year="2024" mail="correo@corrreo.com" />
 </Layout>

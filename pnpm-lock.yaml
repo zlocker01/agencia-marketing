@@ -14,9 +14,6 @@ dependencies:
   astro:
     specifier: 4.6.1
     version: 4.6.1(typescript@5.4.5)
-  tailwindcss:
-    specifier: 3.4.3
-    version: 3.4.3
   typescript:
     specifier: 5.4.5
     version: 5.4.5
