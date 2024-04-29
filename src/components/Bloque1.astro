@@ -1,37 +1,18 @@
----
-interface Props {
-  title: string;
-  body: string;
-  cta: string;
-}
-
-const { title, body, cta } = Astro.props;
----
-
-<section class="bg-principal">
-  <div class="hero container-fluid text-center">
-    <div class="escena-1">
-      <canvas id="hero-escena"></canvas>
-    </div>
-    <h2>¿Quieres dejar de generar likes y empezar a vender?</h2>
-    <h3>Nosotros te ayudamos</h3>
+<div class="bloque-1 container-fluid">
+  <div class="text-center">
+    <p>
+      ¿Estás cansado de esas agencias que te hacen perder el tiempo revisando
+      publicaciones?
+    </p>
+    <p>
+      ¿Tu agencia solo te da pretextos de por qué no está generando más
+      prospectos o ventas para tu negocio?
+    </p>
+    <p>Llegaste al lugar indicado.</p>
+    <p>Da clic aquí y agenda un diagnóstico de marketing totalmente GRATIS</p>
+    <a class="btn btn-primary" href="#">Agendar diagnóstico</a>
   </div>
-  <div class="bloque-1 container-fluid">
-    <div class="text-center">
-      <p>
-        ¿Estás cansado de esas agencias que te hacen perder el tiempo revisando
-        publicaciones?
-      </p>
-      <p>
-        ¿Tu agencia solo te da pretextos de por qué no está generando más
-        prospectos o ventas para tu negocio?
-      </p>
-      <p>Llegaste al lugar indicado.</p>
-      <p>Da clic aquí y agenda un diagnóstico de marketing totalmente GRATIS</p>
-      <a class="btn btn-primary" href="#">Agendar diagnóstico</a>
-    </div>
-    <div class="img-bloque1">
-      <img src="" alt="imagen" />
-    </div>
+  <div class="img-bloque1">
+    <img src="" alt="imagen" />
   </div>
-</section>
+</div>

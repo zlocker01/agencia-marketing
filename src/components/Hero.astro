@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<section class="bg-principal text-text h-dvh">
+  <div class="hero container-fluid text-center">
+    <div class="escena-1 flex justify-center content-center py-20">
+      <canvas class="bg-slate-400" id="hero-escena"></canvas>
+    </div>
+    <h2 class="font-bold">{title}</h2>
+    <h3>{body}</h3>
+  </div>
+</section>
