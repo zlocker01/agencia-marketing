@@ -9,6 +9,17 @@ interface Props {
 const { name, pag1, pag2, pag3 } = Astro.props;
 ---
 
+<script>
+  const menuButton = document.querySelector('#menu-button') as (HTMLButtonElement);
+  const navMenu = document.querySelector('.navbar-list') as (HTMLElement);
+
+  menuButton.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    const expanded = navMenu.classList.contains('hidden') ? 'false' : 'true';
+    menuButton.setAttribute('aria-expanded', expanded);
+  });
+</script>
+
 <header class="flex justify-center items-start fixed w-full h-full">
   <nav
     class="bg-background text-principal z-10 w-full h-auto top-0 left-0 flex flex-row flex-wrap lg:flex-nowrap justify-between items-center px-8 py-2 shadow-md shadow-slate-800 rounded-lg opacity-80 m-3"
@@ -16,7 +27,7 @@ const { name, pag1, pag2, pag3 } = Astro.props;
     <div class="logo font-large font-bold text-base sm:text-lg hover:text-secondary cursor-pointer">
       <h1>{name}</h1>
     </div>
-    <button>
+    <button id="menu-button" type="button">
       <svg class="w-6 h-6 text-principal lg:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
       </svg>
