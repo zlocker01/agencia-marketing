@@ -5,8 +5,8 @@ export default {
 		extend: {
 			colors: {
                 background: '#ecf0f1',
-                principal: '#056CF2',
-                secondary: '#0540F2',
+                principal: '#0540F2',
+                secondary: '#056CF2',
                 text: '#ecf0f1',
                 'text-secondary': '#000',
                 'button-color': '#A6033F',
