@@ -1,0 +1,43 @@
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        // Validación de campos con TypeScript
+        var nombreInput = document.getElementById('nombre') as HTMLInputElement;
+        var emailInput = document.getElementById('email') as HTMLInputElement;
+        var mensajeInput = document.getElementById('mensaje') as HTMLTextAreaElement;
+
+        var nombre = nombreInput.value.trim();
+        var email = emailInput.value.trim();
+        var mensaje = mensajeInput.value.trim();
+
+        if (!nombre || !email || !mensaje) {
+            alert('Por favor, complete todos los campos.');
+        } else {
+            // Aquí puedes enviar el formulario
+            alert('Formulario enviado con éxito!');
+            // document.getElementById('contact-form').submit(); // Si deseas enviar el formulario automáticamente
+        }
+    });
+</script>
+
+<div class="max-w-md mx-auto bg-white p-8 rounded shadow-md my-5">
+    <h2 class="text-2xl text-center font-semibold mb-4 text-principal">Formulario de Contacto</h2>
+    <form id="contact-form" class="space-y-4" action="#" method="POST">
+        <div>
+            <label for="nombre" class="block">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300" required>
+        </div>
+        <div>
+            <label for="email" class="block">Correo Electrónico</label>
+            <input type="email" id="email" name="email" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300" required>
+        </div>
+        <div>
+            <label for="mensaje" class="block">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300" required></textarea>
+        </div>
+        <div>
+            <button type="submit" class="w-full bg-principal text-white py-2 px-4 rounded-md hover:bg-secondary focus:outline-none focus:bg-blue-600">Enviar</button>
+        </div>
+    </form>
+</div>
